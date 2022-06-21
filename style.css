@@ -1,0 +1,75 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --bg-color: white;
+  --ff-color: #323238;
+  --card-color: #02799D;
+  
+  font-size: 62.5%;
+}
+
+body {
+  display: flex;
+  position: relative;
+  height: 100vh;
+  font-family: "Roboto", sans-serif;
+  justify-content: center;
+  align-items: center;
+  color: var(--ff-color);
+}
+
+main {
+  display: flex;
+  justify-self: center;
+  align-self: center;
+  justify-content: space-between;
+  align-items: center;
+  gap: clamp(3rem, 5rem + 10vw, 19.2rem);
+}
+
+button {
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+button.soundOn svg path {
+  fill: var(--card-color);
+}
+button.soundOn svg path + path {
+  fill: white;
+}
+
+.hide {
+  display: none;
+}
+
+.timer-wrapper {
+  width: fit-content;
+  font-size: clamp(6rem, 6rem + 10vw, 11rem);
+}
+
+#timer {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 5rem;
+}
+
+#controls {
+  display: flex;
+  width: 100%;
+  justify-content: space-around;
+
+}
+
+#sound-effect {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+  gap: 3.2rem;
+}
+
