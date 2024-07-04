@@ -1,75 +1,103 @@
 * {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
+    font-family: 'Jost', sans-serif;
 }
 
-:root {
-  --bg-color: white;
-  --ff-color: #323238;
-  --card-color: #02799D;
-  
-  font-size: 62.5%;
+#cronometer {
+    height: 100vh;
 }
 
-body {
-  display: flex;
-  position: relative;
-  height: 100vh;
-  font-family: "Roboto", sans-serif;
-  justify-content: center;
-  align-items: center;
-  color: var(--ff-color);
-}
-
-main {
-  display: flex;
-  justify-self: center;
-  align-self: center;
-  justify-content: space-between;
-  align-items: center;
-  gap: clamp(3rem, 5rem + 10vw, 19.2rem);
-}
-
-button {
-  background: none;
-  border: none;
-  cursor: pointer;
-}
-
-button.soundOn svg path {
-  fill: var(--card-color);
-}
-button.soundOn svg path + path {
-  fill: white;
-}
-
-.hide {
-  display: none;
+.timer-body {
+    background-color: #02799D;
+    border-radius: .93rem;
+    padding: 2rem;
+    text-align: center;
 }
 
 .timer-wrapper {
-  width: fit-content;
-  font-size: clamp(6rem, 6rem + 10vw, 11rem);
+    font-size: clamp(6rem, 6rem + 3vw, 11rem);
+    padding: 40px;
 }
 
 #timer {
-  display: flex;
-  justify-content: center;
-  margin-bottom: 5rem;
+    display: flex;
+    justify-content: center;
+}
+
+.minutes,
+.dot {
+    color: white;
+    font-weight: 500;
+}
+
+.seconds {
+    color: white;
+    font-weight: 100;
+}
+
+#controls button {
+    background: none;
+    border: none;
+    cursor: pointer;
+    color: white;
 }
 
 #controls {
-  display: flex;
-  width: 100%;
-  justify-content: space-around;
-
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
-#sound-effect {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  grid-template-rows: 1fr 1fr;
-  gap: 3.2rem;
+.hide {
+    display: none;
 }
 
+.btn-secondary {
+    background-color: #1d8aac;
+
+    &&:hover {
+        background-color: transparent !important;
+    }
+}
+
+.btn-secondary.active {
+    background-color: #026988;
+    transform: scale(0.98);
+    transform: translateY(4px);
+}
+
+.sound-btn {
+    border-radius: 1.56rem;
+    width: 8.62rem;
+    height: 9.5rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.sound-btn img {
+    width: 5rem;
+}
+
+.sound-btn:hover {
+    transform: scale(0.98);
+}
+
+.sound-btn.active {
+    background-color: #026988;
+    transform: scale(0.98);
+    transform: translateY(4px);
+}
+
+.footer {
+    margin-top: auto;
+}
+
+.footer img {
+    width: 50px;
+}
+
+@media (max-width: 999px) {
+    .timer-body {
+        flex-direction: column-reverse;
+    }
+}

@@ -38,6 +38,7 @@ export default function Events({ controls, timer, sounds }) {
     controls.addSoundOn(forestSoundButton);
   });
 
+
   rainSoundButton.addEventListener("click", () => {
     controls.addSoundOn(rainSoundButton);
   });
@@ -50,3 +51,5 @@ export default function Events({ controls, timer, sounds }) {
     controls.addSoundOn(fireSoundButton);
   });
 }
+
+
